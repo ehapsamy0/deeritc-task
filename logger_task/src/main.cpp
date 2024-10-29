@@ -1,5 +1,6 @@
 #include "Logger.h"
 #include <iostream>
+using namespace std;
 
 int main() {
     Logger& logger = Logger::getInstance();
@@ -8,7 +9,7 @@ int main() {
     logger.log(Logger::WARN, "Low memory warning.");
     logger.log(Logger::ERROR, "An unexpected error occurred.");
 
-    std::cout << "Logging completed. Check logs/application.log file." << std::endl;
+    cout << "Logging completed. Check logs/application.log file." << endl;
 
     return 0;
 }

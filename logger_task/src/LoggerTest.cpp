@@ -2,25 +2,26 @@
 #include <iostream>
 #include <thread>
 #include <vector>
+using namespace std;
 
-void logMessages(const std::string& message, Logger::LogLevel level) {
+void logMessages(const string& message, Logger::LogLevel level) {
     Logger& logger = Logger::getInstance();
     for (int i = 0; i < 10; ++i) {
-        logger.log(level, message + " " + std::to_string(i));
+        logger.log(level, message + " " + to_string(i));
     }
 }
 
 int main() {
-    std::vector<std::thread> threads;
+    vector<thread> threads;
     
-    threads.push_back(std::thread(logMessages, "Message from thread 1", Logger::INFO));
-    threads.push_back(std::thread(logMessages, "Message from thread 2", Logger::WARN));
-    threads.push_back(std::thread(logMessages, "Message from thread 3", Logger::ERROR));
+    threads.push_back(thread(logMessages, "Message from thread 1", Logger::INFO));
+    threads.push_back(thread(logMessages, "Message from thread 2", Logger::WARN));
+    threads.push_back(thread(logMessages, "Message from thread 3", Logger::ERROR));
     
     for (auto& t : threads) {
         t.join();
     }
 
-    std::cout << "Logging completed. Check the logs/application.log file." << std::endl;
+    cout << "Logging completed. Check the logs/application.log file." << endl;
     return 0;
 }

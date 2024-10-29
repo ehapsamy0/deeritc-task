@@ -4,6 +4,8 @@
 #include <fstream>
 #include <mutex>
 #include <string>
+using namespace std;
+
 
 class Logger {
 public:
@@ -14,19 +16,19 @@ public:
     Logger(const Logger&) = delete;
     Logger& operator=(const Logger&) = delete;
 
-    void log(LogLevel level, const std::string& message);
+    void log(LogLevel level, const string& message);
 
 private:
     Logger();
     ~Logger();
 
-    void writeLogEntry(const std::string& entry);
+    void writeLogEntry(const string& entry);
 
-    std::mutex logMutex;
+    mutex logMutex;
 
-    std::ofstream logFile;
+    ofstream logFile;
 
-    std::string formatLogMessage(LogLevel level, const std::string& message);
+    string formatLogMessage(LogLevel level, const string& message);
 };
 
 #endif
