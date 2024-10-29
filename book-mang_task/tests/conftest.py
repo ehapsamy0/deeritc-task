@@ -29,13 +29,12 @@ def client():
 
     with app.test_client() as client:
         with app.app_context():
-            db.create_all()  # Create tables
+            db.create_all()
             yield client
             db.session.remove()
-            db.drop_all()  # Clean up after each test
+            db.drop_all()
 
 
-# Setting up the database session for tests
 @pytest.fixture(scope="session")
 def db_session(app):
     with app.app_context():

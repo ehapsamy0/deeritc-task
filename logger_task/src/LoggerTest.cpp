@@ -3,7 +3,6 @@
 #include <thread>
 #include <vector>
 
-// Test function for multithreaded logging
 void logMessages(const std::string& message, Logger::LogLevel level) {
     Logger& logger = Logger::getInstance();
     for (int i = 0; i < 10; ++i) {
@@ -14,7 +13,6 @@ void logMessages(const std::string& message, Logger::LogLevel level) {
 int main() {
     std::vector<std::thread> threads;
     
-    // Create multiple threads for concurrent logging
     threads.push_back(std::thread(logMessages, "Message from thread 1", Logger::INFO));
     threads.push_back(std::thread(logMessages, "Message from thread 2", Logger::WARN));
     threads.push_back(std::thread(logMessages, "Message from thread 3", Logger::ERROR));

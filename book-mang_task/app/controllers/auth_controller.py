@@ -2,7 +2,8 @@ from flask import request
 from flask_restx import Namespace, Resource, fields
 from app.services.auth_service import register_user, login_user
 from app.extensions import db, logger
-# Create a namespace for auth routes
+
+
 auth_ns = Namespace('auth', description='Authentication related operations')
 
 user_model = auth_ns.model('User', {

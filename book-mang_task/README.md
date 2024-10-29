@@ -5,7 +5,7 @@ readme_content = """
 
 ### Database Diagrams
 
-![Database Diagrams](https://github.com/ehapsamy0/deeritc-task/blob/main/book-mang_task/erd/WhatsApp%20Image%202024-10-30%20at%2000.50.26.jpeg)
+![Database Diagrams](https://github.com/ehapsamy0/deeritc-task/blob/main/book-mang_task/erd/erd.jpeg)
 
 
 

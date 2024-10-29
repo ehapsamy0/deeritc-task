@@ -14,7 +14,6 @@ load_dotenv()
 def create_app(config_name="development"):
     app = Flask(__name__)
 
-    # Set configuration based on the argument passed
     if config_name == "production":
         app.config.from_object(ProductionConfig)
     elif config_name == "testing":

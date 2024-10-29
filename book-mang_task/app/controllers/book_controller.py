@@ -109,12 +109,10 @@ class BookList(Resource):
         """Create a new book"""
         data = request.json
 
-        # Validate and sanitize input
         if not data or not isinstance(data, dict):
             logger.warning("Invalid input format for book creation.")
             return {"error": "Invalid input format"}, 400
 
-        # Strip and sanitize title
         data["title"] = data["title"].strip()
         if "description" in data:
             data["description"] = data["description"].strip()
