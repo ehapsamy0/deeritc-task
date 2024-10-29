@@ -1,4 +1,0 @@
-/home/ehabsami/Desktop/booknest/logger_task/build/CMakeFiles/LoggerProject.dir
-/home/ehabsami/Desktop/booknest/logger_task/build/CMakeFiles/LoggerTest.dir
-/home/ehabsami/Desktop/booknest/logger_task/build/CMakeFiles/edit_cache.dir
-/home/ehabsami/Desktop/booknest/logger_task/build/CMakeFiles/rebuild_cache.dir
