@@ -1,6 +1,14 @@
 # Writing the README content to a file for download
 
 readme_content = """
+
+
+### Database Diagrams
+
+![Database Diagrams](https://github.com/ehapsamy0/deeritc-task/blob/main/book-mang_task/erd/WhatsApp%20Image%202024-10-30%20at%2000.50.26.jpeg)
+
+
+
 # Book Management API
 
 This API provides a way to manage books and book-related bookings. It includes endpoints for creating, updating, and deleting books, as well as for creating and retrieving bookings. Authentication is required for certain operations.
